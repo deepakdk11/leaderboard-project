@@ -1,27 +1,23 @@
 import React from 'react'
+import PlayersList from '../PlayersList/PlayersList'
 
-const Content = ({list, setPopup, handleDelete}) => {
+const Content = ({ handleDelete, sortedPlayers, prizeAmount}) => {
   return (
     <div>
-      <button onClick={() => setPopup(true)}>+</button>
-        <ul>
-            {
-                list.map((players) =>
-                <li key={players.id}>
-                  <p>{players.id}</p>
-                  <p>{players.name}</p>
-                  <div>
-                    <p>{players.minutes}</p>:
-                    <p>{players.seconds}</p>:
-                    <p>{players.milliseconds}</p>
-                    <p></p>
-                  </div>
-                  <button onClick={() => handleDelete(players.id)}>remove</button>
-                </li>
-              
-              )
-            }
-        </ul>
+      {sortedPlayers.map((player, index) => (
+        <PlayersList
+          key={player.id}
+          handleDelete={handleDelete}
+          id={player.id}
+          orderNumber={index + 1}
+          name={player.name}
+          minutes={player.minutes}
+          seconds={player.seconds}
+          milliseconds={player.milliseconds}
+          prize={index < 3 ? prizeAmount[index] : null}
+        />
+      ))}
+        
     </div>
   )
 }

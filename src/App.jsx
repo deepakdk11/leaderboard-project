@@ -8,6 +8,7 @@ function App() {
 
   const [popup, setPopup] = useState(false)
   const [list, setList] = useState(JSON.parse(localStorage.getItem("PLAYERS")) || [])
+ 
   // const [list, setList] = useState([
   //   {
   //     id : 1,
@@ -15,7 +16,7 @@ function App() {
   //     price : 50000,
   //     minutes: 0,
   //     seconds: 21 ,
-  //     milliseconds : 45
+  //     milliseconds : 85
   //   },
   //   {
   //     id : 2,
@@ -35,7 +36,6 @@ function App() {
   //   }
   // ])
 
-  // console.log(list)
 
   const [newPlayer, setNewPlayer] = useState('')
   const [newMinutes, setNewMinutes] = useState('')
@@ -63,7 +63,6 @@ function App() {
   const addClick = (e) => {
     e.preventDefault();
     if(!newPlayer) return;
-    console.log(list)
     addNewPlayer(newPlayer, newMinutes, newSeconds, newMilliseconds)
     setNewPlayer('');
     setNewMinutes('');
@@ -76,6 +75,16 @@ function App() {
     setList(deletePlayer)
     localStorage.setItem("PLAYERS", JSON.stringify(deletePlayer))
   }
+
+  const sortedPlayers = [...list].sort((a, b) => {
+    if (a.minutes !== b.minutes) return a.minutes - b.minutes;
+    if (a.seconds !== b.seconds) return a.seconds - b.seconds;
+    return a.milliseconds - b.milliseconds;
+  });
+
+
+  const prizeAmount = [50000, 30000, 10000]
+
   return (
     <div>
       { popup ? <PopupInput
@@ -94,10 +103,12 @@ function App() {
         : <></>
       } 
       <Content 
-        list = {list}
+        sortedPlayers={sortedPlayers}
         setPopup={setPopup}
         handleDelete={handleDelete}
+        prizeAmount={prizeAmount}
       />
+      <button onClick={() => setPopup(true)} >=</button>
       <Footer />
     </div>
   )

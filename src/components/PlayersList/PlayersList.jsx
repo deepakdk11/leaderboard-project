@@ -1,21 +1,21 @@
 import React from 'react'
+import './PlayersList.css'
+import { IoMdClose } from "react-icons/io";
 
 const PlayersList = ({orderNumber, id,name, minutes, seconds, milliseconds, prize, handleDelete}) => {
   return (
-    <div>
-      <ul>
-            <li>
-                <p>{orderNumber}</p>
-                <p>{name}</p>
-                {prize && <p>{prize}</p>}
-                <div>
-                    <p>{minutes}</p>:
-                    <p>{seconds}</p>:
-                    <p>{milliseconds}</p>
+    <div className='playersList'>
+
+                <p className='serialNumber'>{orderNumber}</p>
+                <p className='playerName'>{name}</p>
+                {prize && <p className='playerPrize'>{prize}</p>}
+                <div className='MSM'>
+                    <p className='minutes'>{minutes}</p>:
+                    <p className='seconds'>{seconds}</p>:
+                    <p className='milliseconds'>{milliseconds}</p>
                 </div>
-                <button onClick={() => handleDelete(id)}>remove</button>
-            </li>
-        </ul>
+                <IoMdClose className='removeBtn' onClick={() => handleDelete(id)}/>
+
     </div>
   )
 }

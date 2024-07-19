@@ -1,9 +1,10 @@
 import React from 'react'
 import PlayersList from '../PlayersList/PlayersList'
+import './Content.css'
 
 const Content = ({ handleDelete, sortedPlayers, prizeAmount}) => {
   return (
-    <div>
+    <div className='content'>
       {sortedPlayers.map((player, index) => (
         <PlayersList
           key={player.id}

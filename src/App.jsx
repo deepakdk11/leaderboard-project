@@ -1,40 +1,40 @@
 import React, { useState } from 'react';
 import Content from '../src/components/Content/Content'
-import './App.css'
 import PopupInput from './components/PopupInput/PopupInput';
 import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 
 function App() {
 
   const [popup, setPopup] = useState(false)
-  const [list, setList] = useState(JSON.parse(localStorage.getItem("PLAYERS")) || [])
+  // const [list, setList] = useState(JSON.parse(localStorage.getItem("PLAYERS")) || [])
  
-  // const [list, setList] = useState([
-  //   {
-  //     id : 1,
-  //     name : "Deepak",
-  //     price : 50000,
-  //     minutes: 0,
-  //     seconds: 21 ,
-  //     milliseconds : 85
-  //   },
-  //   {
-  //     id : 2,
-  //     name : "san",
-  //     price : 50000,
-  //     minutes: 0,
-  //     seconds: 21 ,
-  //     milliseconds : 45
-  //   },
-  //   {
-  //     id : 3,
-  //     name : "Sandhiya",
-  //     price : 50000,
-  //     minutes: 0,
-  //     seconds: 21 ,
-  //     milliseconds : 45
-  //   }
-  // ])
+  const [list, setList] = useState([
+    {
+      id : 1,
+      name : "Deepak",
+      price : 50000,
+      minutes: 0,
+      seconds: 21 ,
+      milliseconds : 85
+    },
+    {
+      id : 2,
+      name : "san",
+      price : 50000,
+      minutes: 0,
+      seconds: 21 ,
+      milliseconds : 45
+    },
+    {
+      id : 3,
+      name : "Sandhiya",
+      price : 50000,
+      minutes: 0,
+      seconds: 21 ,
+      milliseconds : 45
+    }
+  ])
 
 
   const [newPlayer, setNewPlayer] = useState('')
@@ -87,6 +87,7 @@ function App() {
 
   return (
     <div>
+      <Header />
       { popup ? <PopupInput
           setPopup={setPopup}
           addClick={addClick}

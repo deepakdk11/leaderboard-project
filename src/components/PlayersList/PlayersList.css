@@ -1,0 +1,18 @@
+
+.playersList{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid white;
+    width: 700px;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.MSM{
+    display: flex;
+    text-align: center;
+}
+.playerName{
+    
+}

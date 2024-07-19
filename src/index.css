@@ -26,3 +26,6 @@ a{
     right: 10px;
     cursor: pointer;
 }
+input:focus{
+    outline: 0;
+}

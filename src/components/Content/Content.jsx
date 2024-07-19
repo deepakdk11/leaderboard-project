@@ -5,9 +5,9 @@ import { ImTrophy } from "react-icons/im";
 import { RxLapTimer } from "react-icons/rx";
 import { FcDeleteDatabase } from "react-icons/fc";
 
-const Content = ({ handleDelete, sortedPlayers, prizeAmount, allClear}) => {
+const Content = ({popup, handleDelete, sortedPlayers, prizeAmount, allClear}) => {
   return (
-    <div className='content'>
+    <div className={popup ? '' : 'active'} id='content'>
       <div className='heading'>
         <ImTrophy style={{color:"gold"}} />
         <p className='playerName'>NAME</p>

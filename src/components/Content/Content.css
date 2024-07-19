@@ -1,11 +1,13 @@
-.content{
+#content{
     margin: 20px auto;
     border-radius: 10px;
     width: fit-content;
     padding: 30px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: rgb(255, 255, 255); 
+}
+.active{
     backdrop-filter: blur(20px);
-    color: rgb(255, 255, 255);
 }
 
 .heading{
@@ -27,4 +29,17 @@
 .timing p{
     margin-left: 10px;
     margin-right: 30px;
+}
+
+@media only screen and (max-width: 780px){
+    .heading{
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .heading{
+        width: 300px;
+        font-size: 12px;
+    }
 }

@@ -108,6 +108,7 @@ function App() {
         : <></>
       } 
       <Content 
+        popup={popup}
         sortedPlayers={sortedPlayers}
         setPopup={setPopup}
         handleDelete={handleDelete}

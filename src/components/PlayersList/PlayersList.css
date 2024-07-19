@@ -35,3 +35,16 @@
     color: black;
     font-weight: bolder;
 }
+
+@media only screen and (max-width: 780px){
+    .playersList{
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .playersList{
+        width: 300px;
+        font-size: 10px;
+    }
+}

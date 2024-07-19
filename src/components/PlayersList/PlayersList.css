@@ -1,18 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
 
 .playersList{
     display: flex;
     justify-content: space-between;
-    border: 1px solid white;
     width: 700px;
     align-items: center;
     padding: 10px;
+    margin: 10px 0px;
+    border-radius: 5px 5px 20px 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-family: "Bodoni Moda SC", serif;
+    color: rgb(254, 255, 222);
+
     
 }
 
 .MSM{
     display: flex;
     text-align: center;
+    width: 100px;
+    justify-content: space-between;
+    margin: 0px 20px;
 }
+
 .playerName{
-    
+    flex: 1;
+    margin-left: 30px;
+}
+
+.serialNumber{
+    background-color: white;
+    border-radius: 5px 5px 20px 5px;
+    padding: 0px 10px;
+    color: black;
+    font-weight: bolder;
 }

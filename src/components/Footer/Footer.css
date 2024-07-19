@@ -1,0 +1,9 @@
+footer{
+    width: 100%;
+    backdrop-filter: blur(20px);
+    padding: 6px 0px;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    color: white;
+}

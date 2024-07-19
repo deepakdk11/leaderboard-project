@@ -1,3 +1,31 @@
 header{
+    margin-top: 20PX;
     text-align: center;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    font-style: italic;
+}
+
+header .leftContainer{
+    margin-right: 5px;
+    flex: 1;
+}
+.leftContainer .left{
+    width: 100%;
+    height: 5px;
+    background-color: #e48647;    
+    margin-top: 5px;
+}
+header .rightContainer{
+    flex: 1;
+    margin-left: 8px;
+}
+
+.rightContainer .right{
+    margin-top: 5px;
+    width: 100%;
+    height: 5px;
+    background-color: #1cb1d9;
 }

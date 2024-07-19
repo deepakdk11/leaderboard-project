@@ -3,6 +3,7 @@ import Content from '../src/components/Content/Content'
 import PopupInput from './components/PopupInput/PopupInput';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import { IoMdAdd } from "react-icons/io";
 
 function App() {
 
@@ -82,6 +83,9 @@ function App() {
     return a.milliseconds - b.milliseconds;
   });
 
+  const allClear = () => {
+    setList([])
+  }
 
   const prizeAmount = [50000, 30000, 10000]
 
@@ -108,8 +112,9 @@ function App() {
         setPopup={setPopup}
         handleDelete={handleDelete}
         prizeAmount={prizeAmount}
+        allClear={allClear}
       />
-      <button onClick={() => setPopup(true)} >=</button>
+      <IoMdAdd onClick={() => setPopup(true)} className='addIcon' />
       <Footer />
     </div>
   )

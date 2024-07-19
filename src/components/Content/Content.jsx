@@ -1,10 +1,22 @@
 import React from 'react'
 import PlayersList from '../PlayersList/PlayersList'
 import './Content.css'
+import { ImTrophy } from "react-icons/im";
+import { RxLapTimer } from "react-icons/rx";
+import { FcDeleteDatabase } from "react-icons/fc";
 
-const Content = ({ handleDelete, sortedPlayers, prizeAmount}) => {
+const Content = ({ handleDelete, sortedPlayers, prizeAmount, allClear}) => {
   return (
     <div className='content'>
+      <div className='heading'>
+        <ImTrophy style={{color:"gold"}} />
+        <p className='playerName'>NAME</p>
+        <div className='timing'>
+          <RxLapTimer />
+          <p>Timing</p>
+        </div>
+        <FcDeleteDatabase size={25} onClick={allClear} style={{cursor:'pointer'}} />
+      </div>
       {sortedPlayers.map((player, index) => (
         <PlayersList
           key={player.id}

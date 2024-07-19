@@ -1,8 +1,9 @@
 import React from 'react'
+import './PopupInput.css'
 
 const PopupInput = ({list, addClick, setPopup, newPlayer, setNewPlayer,newMinutes, setNewMinutes, newSeconds, setNewSeconds, newMilliseconds, setNewMilliseconds  }) => {
   return (
-    <div>
+    <div className='popup' >
       <button onClick={() => setPopup(false)}>Close</button>
       <form onSubmit={addClick} >
               <input type="text" name="playerInput" id="playerInput" placeholder='Player Name' onChange={(e) => setNewPlayer(e.target.value)} value={newPlayer} autoFocus required />

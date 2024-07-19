@@ -5,16 +5,15 @@ import { IoMdClose } from "react-icons/io";
 const PlayersList = ({orderNumber, id,name, minutes, seconds, milliseconds, prize, handleDelete}) => {
   return (
     <div className='playersList'>
-
                 <p className='serialNumber'>{orderNumber}</p>
                 <p className='playerName'>{name}</p>
-                {prize && <p className='playerPrize'>{prize}</p>}
+                {prize && <p className='playerPrize'> &#8377; {prize}</p>}
                 <div className='MSM'>
                     <p className='minutes'>{minutes}</p>:
                     <p className='seconds'>{seconds}</p>:
                     <p className='milliseconds'>{milliseconds}</p>
                 </div>
-                <IoMdClose className='removeBtn' onClick={() => handleDelete(id)}/>
+                <IoMdClose className='removeBtn' onClick={() => handleDelete(id)} style={{cursor:'pointer'}}/>
 
     </div>
   )

@@ -56,10 +56,10 @@ input:focus{
       opacity: 1;
       box-shadow: 0 0 500px rgba(241, 241, 241, 0);
     }
-  }
+}
 
 
-  @media only screen and (max-width: 480px){
+@media only screen and (max-width: 480px){
     .addIcon{
         right: 20px;
     }

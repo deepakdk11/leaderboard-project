@@ -23,9 +23,20 @@ a{
     border-radius: 50% ;
     position: fixed;
     bottom: 50px;
-    right: 10px;
+    right: 50px;
     cursor: pointer;
+    color: white;
 }
 input:focus{
     outline: 0;
+}
+
+::placeholder {
+    font-family: "Outfit", sans-serif;
+  }
+
+  @media only screen and (max-width: 480px){
+    .addIcon{
+        right: 20px;
+    }
 }

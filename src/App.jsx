@@ -56,6 +56,7 @@ function App() {
 
   const allClear = () => {
     setList([])
+    localStorage.setItem("PLAYERS", JSON.stringify([]))
   }
 
   const prizeAmount = [50000, 30000, 10000]

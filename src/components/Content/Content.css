@@ -37,9 +37,15 @@
     }
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 490px){
     .heading{
         width: 300px;
         font-size: 12px;
+    }
+}
+@media only screen and (max-width: 400px){
+    .heading{
+        width: 250px;
+        font-size: 10px;
     }
 }

@@ -11,8 +11,7 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     font-family: "Bodoni Moda SC", serif;
     color: rgb(254, 255, 222);
-
-    
+    animation: fadeIn 1s;
 }
 
 .MSM{

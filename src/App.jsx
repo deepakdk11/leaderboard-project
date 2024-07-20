@@ -40,6 +40,7 @@ function App() {
     setNewMinutes('');
     setNewSeconds('');
     setNewMilliseconds('');
+    setPopup(false)
   }
 
   const handleDelete = (id) => {

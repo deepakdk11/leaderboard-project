@@ -1,4 +1,4 @@
-.popup{
+#popup{
     position: absolute;
     top: 0;
     width: 100%;
@@ -9,10 +9,17 @@
     backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
-    -webkit-animation: popup 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+    
 }
 
-.popup form{
+.removeAni{
+    animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.addAni{
+    animation: popup 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+}
+
+#popup form{
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -22,7 +29,7 @@
     border-radius: 10px;
 }
 
-.popup input{
+#popup input{
     padding: 10px 10px;
     margin: 10px 0px;
     text-align: center;
@@ -40,7 +47,7 @@
     width: 50px;
 }
 
-.popup button{
+#popup button{
     margin: 20px 0px 10px 0px;
     padding: 10px 10px;
     border-radius: 5px;

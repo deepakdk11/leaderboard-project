@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './PopupInput.css'
 import { IoMdClose } from "react-icons/io";
 
 const PopupInput = ({ addClick, setPopup, newPlayer, setNewPlayer,newMinutes, setNewMinutes, newSeconds, setNewSeconds, newMilliseconds, setNewMilliseconds  }) => {
+  const [close, setClose] = useState(false)
+  const deleting = () => {
+    setClose(true)
+    setTimeout(()=>{
+      setPopup(false)
+    },500)
+  }
   return (
-    <div className="popup" >
-      <IoMdClose  onClick={() => setPopup(false)} className='closeBtn' size={35} />
+       <div className={close ? "removeAni" :" addAni"} id='popup'>
+      <IoMdClose  onClick={deleting} className='closeBtn' size={35} />
       <form onSubmit={addClick} >
               <input type="text" name="playerInput" id="playerInput" placeholder='Player Name' onChange={(e) => setNewPlayer(e.target.value)} value={newPlayer} autoFocus required />
               <div className='number'>
